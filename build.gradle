@@ -4,20 +4,17 @@ project.version = '1.0.0'
 /**
  * abfran
  */
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+    }
+}
 
 allprojects {
-
-    /*
-    buildscript {
-        repositories {
-            jcenter()
-        }
-
-        dependencies {
-            classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
-        }
-    }
-*/
 
     ext {
         springVersion = "4.0.9.RELEASE"
@@ -25,13 +22,7 @@ allprojects {
         cxfVersion = "3.0.3"
     }
 
-    /*
     apply plugin: 'org.asciidoctor.convert'
-
-    asciidoctor {
-        attributes 'source-highlighter': 'coderay'
-    }
-    */
 
 }
 
@@ -43,14 +34,14 @@ subprojects {
 
     apply plugin: 'groovy'
 
-    sourceCompatibility = 1.6
-    targetCompatibility = 1.6
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 
     dependencies {
         testCompile "org.jmock:jmock-junit4:2.5.1"
         testCompile "org.jmock:jmock-legacy:2.5.1"
         testCompile "junit:junit:4.11"
-        testCompile "org.springframework:spring-test:$project.springVersion"
+        testCompile "org.springframework:spring-test:$springVersion"
     }
 
 }
