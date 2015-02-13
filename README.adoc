@@ -9,7 +9,7 @@ Currently Lesser Gnu Public License (LGPL) v3, however, the owner of the project
 
 == Collaboration
 This is sort of a personal project just for fun and with no intent of becoming a production ready solution.
-However, we take it very seriously and anyone is invited to contribute. To help manage this two custom labels have been created to categorize issues:
+However, we take it very seriously and anyone is invited to contribute. To help manage this, two custom labels have been created to categorize issues:
 
 * _task_: important stuff that must be done soon. Pretty similar to _help wanted_ but for more prioritary tasks.
-* _open discussion_: open questions about the design of the solution. The main intent for this issues is to
+* _open discussion_: open questions about the design of the solution. The main intent for this issues label is to promote discussion and collaboration on key aspects that may be urgent or not.
