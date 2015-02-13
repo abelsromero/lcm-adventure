@@ -1,4 +1,4 @@
-package org.lcm.services.ws.soap.schema;
+package org.lcm.model.core.ws;
 
 import javax.activation.DataHandler;
 

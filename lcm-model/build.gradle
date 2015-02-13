@@ -1,5 +1,7 @@
 
 dependencies {
 
+    /* Mongo JPA-like annotations */
+    compile 'org.springframework.data:spring-data-mongodb:1.6.2.RELEASE'
 }
 
