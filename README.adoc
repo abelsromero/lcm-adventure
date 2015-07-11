@@ -5,7 +5,7 @@ Personal playground for a lightweight content management system
 WARNING: this project is still heavily work-in-progress
 
 == Licence
-Currently Lesser Gnu Public License (LGPL) v3, however, the owner of the project revers its rights to change it someday.
+Currently Lesser Gnu Public License (LGPL) v3, however, the owner of the project reserves its rights to change it someday.
 
 == Collaboration
 This is sort of a personal project just for fun and with no intent of becoming a production ready solution.
