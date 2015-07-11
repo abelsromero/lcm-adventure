@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+                http://www.springframework.org/schema/data/mongo
+                http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+    <mongo:mongo host="127.0.0.1" port="27017" />
+
+    <mongo:db-factory dbname="lcm_db" mongo-ref="mongo" />
+
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+    </bean>
+    
+    <!-- Mongo Embedded Service -->
+    <bean id="mongoEmbedded" class="org.lcm.backend.mongodb.embedded.EmbeddedMongoDatabase" init-method="init" destroy-method="close">
+        <property name="name" value="lcm_db" />
+        <property name="port" value="27017" /> 
+    </bean>
+
+</beans>

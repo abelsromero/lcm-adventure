@@ -1,5 +1,7 @@
 package org.lcm.backend.common;
 
+import java.util.List;
+
 /**
  * Created by abelsromero on 13/02/2015.
  */
@@ -17,5 +19,7 @@ public interface Persistable<T, K> {
     void update(K id, T entity);
 
     void delete(K id);
+    
+    List<T> findAll();
 
 }

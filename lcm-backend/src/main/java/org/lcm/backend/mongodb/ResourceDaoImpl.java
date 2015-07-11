@@ -1,6 +1,7 @@
 package org.lcm.backend.mongodb;
 
-import com.mongodb.WriteResult;
+import java.util.List;
+
 import org.lcm.backend.ResourceDao;
 import org.lcm.model.core.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
+
+import com.mongodb.WriteResult;
 
 /**
  * Created by abelsromero on 13/02/2015.
@@ -49,5 +52,10 @@ public class ResourceDaoImpl implements ResourceDao {
         WriteResult result = mongoOps.remove(query, Resource.class);
         System.out.println(result);
         // mongoOps.findAndRemove(query,Resource.class);
+    }
+
+    @Override
+    public List<Resource> findAll() {
+        return mongoOps.findAll(Resource.class);
     }
 }

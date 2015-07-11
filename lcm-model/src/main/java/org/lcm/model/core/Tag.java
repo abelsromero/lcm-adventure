@@ -13,7 +13,7 @@ public class Tag {
     private String id;
     private String name;
 
-    private Tag parent;
+//    private Tag parent;
 
     public Tag(){}
 
@@ -33,12 +33,14 @@ public class Tag {
         this.name = name;
     }
 
-    public Tag getParent() {
-        return parent;
-    }
-
-    public void setParent(Tag parent) {
-        this.parent = parent;
-    }
+    // Recursivity creates a problem in Spring-Data
+    // org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexResolver$CyclicPropertyReferenceException: Found cycle for field 'parent' in type 'Tag' for path 'tags'
+//    public Tag getParent() {
+//        return parent;
+//    }
+//
+//    public void setParent(Tag parent) {
+//        this.parent = parent;
+//    }
 
 }

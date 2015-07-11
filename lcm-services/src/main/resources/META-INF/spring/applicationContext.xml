@@ -12,5 +12,8 @@
     <task:annotation-driven/>
 
     <context:component-scan base-package="org.lcm.services.ws.*"/>
+    <context:component-scan base-package="org.lcm.backend.*"/>
+    
+    <import resource="mongo-settings.xml"/>
 
 </beans>

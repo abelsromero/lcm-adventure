@@ -21,7 +21,7 @@ public class Resource {
     // private List<Content> contents;
 
     public Resource(){}
-
+ 
     public String getId() {
         return id;
     }

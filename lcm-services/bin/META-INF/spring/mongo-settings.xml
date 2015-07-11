@@ -9,10 +9,17 @@
                 http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
     <mongo:mongo host="127.0.0.1" port="27017" />
-    <mongo:db-factory dbname="lcm_db" />
+
+    <mongo:db-factory dbname="lcm_db" mongo-ref="mongo" />
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+    </bean>
+    
+    <!-- Mongo Embedded Service -->
+    <bean id="mongoEmbedded" class="org.lcm.backend.mongodb.embedded.EmbeddedMongoDatabase" init-method="init" destroy-method="close">
+        <property name="name" value="lcm_db" />
+        <property name="port" value="27017" /> 
     </bean>
 
 </beans>
