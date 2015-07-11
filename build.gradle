@@ -20,6 +20,7 @@ allprojects {
         springVersion = "4.0.9.RELEASE"
         slf4jVersion = "1.7.6"
         cxfVersion = "3.0.3"
+        mongoVersion = "3.0.2"
     }
 
     apply plugin: 'org.asciidoctor.convert'
@@ -47,5 +48,5 @@ subprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
+    gradleVersion = '2.5'
 }

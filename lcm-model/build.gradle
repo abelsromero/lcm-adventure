@@ -2,6 +2,9 @@
 dependencies {
 
     /* Mongo JPA-like annotations */
-    compile 'org.springframework.data:spring-data-mongodb:1.6.2.RELEASE'
+    // Realy considering not using spring dat to be able to use any version of MongoDB
+    compile ('org.springframework.data:spring-data-mongodb:1.7.1.RELEASE') {
+         exclude (group: 'org.mongodb', module: 'mongo-java-driver')
+    }
 }
 
